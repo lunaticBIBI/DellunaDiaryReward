@@ -1,0 +1,6 @@
+name: DellunaDiaryReward
+version: '${version}'
+main: me.delluna.plugins.main.Main
+api-version: 1.19
+authors: [ lunaticBIBI ]
+description: reward for writing a daily diary
