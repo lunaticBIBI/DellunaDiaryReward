@@ -18,11 +18,18 @@ public final class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         // plugin startup console logging
 
-        Enum<ChatColor> color = ChatColor.GRAY;
-        Enum<ChatColor> accColor = ChatColor.GREEN;
-        logger.sendMessage(color + "///* *=====* ----- ****** ----- *=====* *///");
-        logger.sendMessage(color + "[Delluna Town] 하루일지 보상 플러그인을 " + accColor + "활성화" + color + "합니다.");
-        logger.sendMessage(color + "/*/* === * -- * -- * // * -- * -- * === */*/");
+        Enum<ChatColor> gray        = ChatColor.GRAY;
+        Enum<ChatColor> green       = ChatColor.GREEN;
+        Enum<ChatColor> yellow      = ChatColor.YELLOW;
+
+        StringBuffer mark        = new StringBuffer();
+        mark.append(gray + "[" + yellow + "Delluna" + green + "Town" + gray + "]");
+        mark.append(gray + " Diary Reward Plugin ");
+        mark.append(green + "Enabling");
+
+        logger.sendMessage(gray + "///* *=====* ----- ****** ----- *=====* *///");
+        logger.sendMessage(mark.toString());
+        logger.sendMessage(gray + "/*/* === * -- * -- * // * -- * -- * === */*/");
 
         getServer().getPluginManager().registerEvents(this, this);
     }
@@ -31,10 +38,17 @@ public final class Main extends JavaPlugin implements Listener {
     public void onDisable() {
         // Plugin shutdown console logging
 
-        Enum<ChatColor> color = ChatColor.GRAY;
-        Enum<ChatColor> accColor = ChatColor.RED;
-        logger.sendMessage(color + "///* *=====* ----- ****** ----- *=====* *///");
-        logger.sendMessage(color + "[Delluna Town] 하루일지 보상 플러그인을 " + accColor + "비활성화" + color + "합니다.");
-        logger.sendMessage(color + "/*/* === * -- * -- * // * -- * -- * === */*/");
+        Enum<ChatColor> gray        = ChatColor.GRAY;
+        Enum<ChatColor> red         = ChatColor.RED;
+        Enum<ChatColor> yellow      = ChatColor.YELLOW;
+
+        StringBuffer mark        = new StringBuffer();
+        mark.append(gray + "[" + yellow + "Delluna" + red + "Town" + gray + "]");
+        mark.append(gray + " Diary Reward Plugin ");
+        mark.append(red + "Disabling");
+
+        logger.sendMessage(gray + "///* *=====* ----- ****** ----- *=====* *///");
+        logger.sendMessage(mark.toString());
+        logger.sendMessage(gray + "/*/* === * -- * -- * // * -- * -- * === */*/");
     }
 }
